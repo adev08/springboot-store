@@ -1,4 +1,4 @@
-package com.springboottoturial.store.service;
+package com.springboottoturial.store.services;
 
 import org.springframework.stereotype.Service;
 
@@ -11,7 +11,7 @@ public class NotificationManager {
         this.notificationService = notificationService;
     }
 
-    public void sendNotification(String message) {
-        notificationService.send(message);
+    public void sendNotification(String message, String recipientEmail) {
+        notificationService.send(message, message);
     }
 }

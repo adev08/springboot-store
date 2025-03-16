@@ -1,4 +1,4 @@
-package com.springboottoturial.store.controller;
+package com.springboottoturial.store.controllers;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
