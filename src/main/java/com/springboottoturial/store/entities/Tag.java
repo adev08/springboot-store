@@ -6,15 +6,15 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
-@Table(name = "users")
-@AllArgsConstructor
-@NoArgsConstructor
-public class User {
-    
+@Table(name = "tags")
+@Getter
+@Setter
+public class Tag {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -23,11 +23,4 @@ public class User {
     @Column(name = "name")
     private String name;
 
-
-    @Column( name = "email")
-    private String email;
-
-    @Column(name = "password")
-    private String password;
-    
 }

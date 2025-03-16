@@ -1,6 +1,16 @@
 spring:
   application:
     name: store
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=store
+    username: postgres
+    password: HelpDesk21!
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
 stripe:
  apiUrl: https://api.stripe.com
  timeout: 1000

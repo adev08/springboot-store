@@ -6,28 +6,29 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
-@Table(name = "users")
-@AllArgsConstructor
-@NoArgsConstructor
-public class User {
-    
+@Table(name = "address")
+@Getter
+@Setter
+public class Address {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "street")
+    private String street;
 
+    @Column(name = "city")
+    private String city;
 
-    @Column( name = "email")
-    private String email;
+    @Column(name = "zip")
+    private String zipCode;
 
-    @Column(name = "password")
-    private String password;
-    
+    @Column(name = "state")
+    private String state;
 }
