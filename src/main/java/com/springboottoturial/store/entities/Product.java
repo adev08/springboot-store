@@ -1,5 +1,7 @@
 package com.springboottoturial.store.entities;
 
+import java.math.BigDecimal;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,29 +14,23 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "address")
+@Table(name = "products")
 @Getter
 @Setter
-public class Address {
-
+public class Product {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "street")
-    private String street;
+    @Column(name = "name")
+    private String name;
 
-    @Column(name = "city")
-    private String city;
-
-    @Column(name = "zip")
-    private String zipCode;
-
-    @Column(name = "state")
-    private String state;
+    @Column(name = "price")
+    private BigDecimal price;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
+    @JoinColumn(name = "category_id")
+    private Category category;
 }
