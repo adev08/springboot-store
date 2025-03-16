@@ -1,4 +1,4 @@
-package com.springboottoturial.store.service;
+package com.springboottoturial.store.services;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Primary;

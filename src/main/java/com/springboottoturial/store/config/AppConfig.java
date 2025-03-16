@@ -3,10 +3,10 @@ package com.springboottoturial.store.config;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 
-import com.springboottoturial.store.service.OrderService;
-import com.springboottoturial.store.service.PayPalPaymentService;
-import com.springboottoturial.store.service.PaymentService;
-import com.springboottoturial.store.service.StripePaymentService;
+import com.springboottoturial.store.services.OrderService;
+import com.springboottoturial.store.services.PayPalPaymentService;
+import com.springboottoturial.store.services.PaymentService;
+import com.springboottoturial.store.services.StripePaymentService;
 
 public class AppConfig {
 
